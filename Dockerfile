@@ -1,3 +1,2 @@
-FROM tensorflow/tensorflow:latest-gpu-py3
+FROM tensorflow/tensorflow:nightly-gpu-py3-jupyter
 RUN pip install jupyterlab
-RUN jupyter lab --ip="0.0.0.0"
