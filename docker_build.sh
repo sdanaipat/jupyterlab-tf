@@ -13,8 +13,8 @@ function build () {
 
 git fetch --all --tags --prune
 current_branch=$(git branch | grep \* | cut -d ' ' -f2)
-
 git stash
+
 GIT_TAGS="master $(git tag)"
 for git_tag in $GIT_TAGS;
 do
