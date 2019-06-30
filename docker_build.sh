@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-TF_DOCKER_TAGS="latest-gpu-py3 nightly-gpu-py3"
+TF_DOCKER_TAGS="nightly-gpu-py3"
 
 function build () {
   tf_tag=$1
