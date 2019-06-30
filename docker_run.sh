@@ -9,4 +9,4 @@ docker run -it \
            -v /mnt/data:/work_dir/data \
            -v /mnt/work_ssd:/work_dir/ssd \
            -p 8888:8888 \
-           sdanaipat/jupyter-tf:$tag
+           sdanaipat/jupyterlab-tf:$tag
