@@ -10,16 +10,8 @@ function build () {
   docker push sdanaipat/jupyterlab-tf:latest-$tf_tag
 }
 
-git fetch --all --tags --prune
-current_branch=$(git branch | grep \* | cut -d ' ' -f2)
-git stash
-
-git checkout master
   for tf_tag in $TF_DOCKER_TAGS;
   do
     echo "building tf-tag: $tf_tag"
     build $tf_tag
   done
-
-git checkout $current_branch
-git stash pop

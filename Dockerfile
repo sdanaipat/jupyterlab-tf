@@ -1,4 +1,4 @@
-ARG tf_docker_tag="latest-py3"
+ARG tf_docker_tag="latest-gpu-py3"
 FROM tensorflow/tensorflow:${tf_docker_tag}
 
 RUN pip install jupyterlab \
