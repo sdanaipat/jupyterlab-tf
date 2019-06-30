@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-$tag=$1
+tag=$1
 docker run -it \
            --rm \
            --name jupyterlab-tf \
