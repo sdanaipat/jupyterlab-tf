@@ -5,7 +5,13 @@ RUN pip install jupyterlab \
                 scikit-learn \
                 scikit-image \
                 pandas \
-                keras
+                keras \
+                autokeras
+
+RUN git clone https://github.com/NVIDIA/apex && \
+    cd apex && \
+    pip install -v --no-cache-dir ./ && \
+    rm -rf apex
 
 RUN apt-get update && \
     apt-get install -y curl
