@@ -3,7 +3,7 @@
 $tag=$1
 docker run -it \
            --rm \
-           --name jupyterlab-tf
+           --name jupyterlab-tf \
            -u $(id -u):$(id -g) \
            -v ${HOME}/notebooks:/work_dir/notebooks \
            -v /mnt/data:/work_dir/data \
