@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-
-tag=$1
-docker run -it \
+runtime=$1
+tag=$2
+docker run $runtime -it \
            --rm \
            --name jupyterlab-tf \
            -u $(id -u):$(id -g) \
