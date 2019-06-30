@@ -7,7 +7,8 @@ function build () {
   tf_tag=$2
   docker build --build-arg tf_docker_tag=$tf_tag \
                --tag sdanaipat/jupyterlab-tf:$git_tag-$tf_tag \
-               .
+               . && \
+  docker push sdanaipat/jupyterlab-tf:$git_tag-$tf_tag
 }
 
 git fetch --all --tags --prune

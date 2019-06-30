@@ -1,7 +1,11 @@
 ARG tf_docker_tag
 FROM tensorflow/tensorflow:${tf_docker_tag}
 
-RUN pip install jupyterlab
+RUN pip install jupyterlab \
+                scikit-learn \
+                scikit-image \
+                pandas \
+                keras
 
 WORKDIR work_dir
 RUN chmod 777 /work_dir
