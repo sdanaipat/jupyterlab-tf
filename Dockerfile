@@ -10,8 +10,8 @@ RUN pip install jupyterlab \
 WORKDIR work_dir
 RUN chmod 777 /work_dir
 
-RUN mkdir -p /.local && chmod 777 /.local \
-    mkdir -p /.jupyter && chmod 777 /.jupyter \
+RUN mkdir -p /.local && chmod 777 /.local && \
+    mkdir -p /.jupyter && chmod 777 /.jupyter
 
 COPY startup.sh work_dir/startup.sh
 
