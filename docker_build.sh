@@ -10,8 +10,8 @@ function build () {
   docker push sdanaipat/jupyterlab-tf:latest-$tf_tag
 }
 
-  for tf_tag in $TF_DOCKER_TAGS;
-  do
-    echo "building tf-tag: $tf_tag"
-    build $tf_tag
-  done
+for tf_tag in $TF_DOCKER_TAGS;
+do
+  echo "building tf-tag: $tf_tag"
+  build $tf_tag
+done
