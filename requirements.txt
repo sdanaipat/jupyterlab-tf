@@ -1,0 +1,8 @@
+jupyterlab
+numpy
+scipy
+scikit-learn
+scikit-image
+pandas
+keras
+autokeras
