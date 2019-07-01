@@ -5,7 +5,6 @@ docker run $runtime -it \
            --rm \
            --name jupyterlab-tf \
            -u $(id -u):$(id -g) \
-           -v ${HOME}/.local:/work_dir/.local \
            -v ${HOME}/.jupyter:/work_dir/.jupyter \
            -v ${HOME}/notebooks:/work_dir/notebooks \
            -v /mnt/data:/work_dir/data \
