@@ -6,6 +6,7 @@ function build () {
   tf_tag=$1
   docker build --build-arg tf_docker_tag=$tf_tag \
                --tag sdanaipat/jupyterlab-tf:dev-$tf_tag \
+               --no-cache \
                . && \
   docker push sdanaipat/jupyterlab-tf:dev-$tf_tag
 }
