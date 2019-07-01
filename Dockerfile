@@ -21,7 +21,7 @@ RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - && \
 RUN jupyter labextension install @jupyterlab/toc
 
 WORKDIR work_dir
-RUN chmod 777 work_dir
+RUN chmod 777 /work_dir
 
 EXPOSE 8888
 ENTRYPOINT /app/startup.sh
