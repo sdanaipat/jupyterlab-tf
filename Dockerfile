@@ -1,7 +1,11 @@
 ARG tf_docker_tag="latest-gpu-py3"
 FROM tensorflow/tensorflow:${tf_docker_tag}
 
-RUN pip install -r requirements.txt
+
+RUN mkdir /app
+COPY startup.sh /app/startup.sh
+COPY requirements.txt /app/requirements.txt
+RUN pip install -r /app/requirements.txt
 
 RUN apt-get update && \
     apt-get install -y curl git
@@ -18,8 +22,6 @@ RUN jupyter labextension install @jupyterlab/toc
 
 WORKDIR work_dir
 
-RUN mkdir /app
-COPY startup.sh /app/startup.sh
 
 EXPOSE 8888
 ENTRYPOINT /app/startup.sh
