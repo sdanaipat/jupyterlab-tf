@@ -13,7 +13,7 @@ RUN apt-get update && \
 RUN git clone https://github.com/NVIDIA/apex && \
     cd apex && \
     pip install -v --no-cache-dir ./ && \
-    rm -rf apex
+    rm -rf /apex
 
 RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - && \
     apt-get install -y nodejs
