@@ -1,7 +1,7 @@
 ARG tf_docker_tag="latest-gpu-py3"
 FROM tensorflow/tensorflow:${tf_docker_tag}
 
-RUN pip install -t requirements.txt
+RUN pip install -r requirements.txt
 
 RUN apt-get update && \
     apt-get install -y curl git
