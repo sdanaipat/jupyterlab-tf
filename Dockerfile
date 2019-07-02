@@ -18,9 +18,9 @@ RUN git clone https://github.com/NVIDIA/apex && \
 RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - && \
     apt-get install -y nodejs
 
-RUN pip install --no-deps autokeras 
-
 RUN jupyter labextension install @jupyterlab/toc
+
+RUN pip install --no-deps autokeras
 
 WORKDIR work_dir
 RUN chmod 777 /work_dir
