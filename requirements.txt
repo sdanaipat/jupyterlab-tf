@@ -5,4 +5,8 @@ scikit-learn
 scikit-image
 pandas
 keras
-autokeras
+torch
+torchvision
+tqdm
+imageio
+requests
