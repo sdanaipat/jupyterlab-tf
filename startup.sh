@@ -1,3 +1,8 @@
 #!/usr/bin/env bash
+export HOME=/work_dir
 
-jupyter lab --ip="0.0.0.0" --no-browser .
+tensorboard --logdir ./tensorboard \
+            --port 6006 &
+
+jupyter lab --ip="0.0.0.0" \
+            --no-browser .
