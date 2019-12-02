@@ -15,3 +15,8 @@ do
   echo "building tf-tag: $tf_tag"
   build $tf_tag
 done
+
+
+docker build --build-arg tf_docker_tag=latest-gpu-py3 \
+             --tag sdanaipat/jupyterlab-tf:latest \
+             .

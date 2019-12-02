@@ -11,8 +11,9 @@ docker run --runtime $runtime \
            --rm \
            --name jupyterlab-tf \
            -u $(id -u):$(id -g) \
-           -v ${HOME}/.local:/.local \
-           -v ${HOME}/.jupyter:/.jupyter \
+           -v ${HOME}/.local:/work_dir/.local \
+           -v ${HOME}/.keras:/work_dir/.keras \
+           -v ${HOME}/.jupyter:/work_dir/.jupyter \
            -v ${HOME}/notebooks:/work_dir/notebooks \
            -v /mnt/data:/work_dir/data \
            -v /mnt/work_ssd:/work_dir/ssd \
