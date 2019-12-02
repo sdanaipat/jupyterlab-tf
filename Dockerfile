@@ -15,10 +15,13 @@ RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - && \
 
 RUN jupyter labextension install @jupyterlab/toc
 
-RUN mkdir -p /.local && chmod 777 /.local && \
-    mkdir -p /.jupyter && chmod 777 /.jupyter
-
 WORKDIR work_dir
+
+RUN mkdir -p /work_dir/.local && chmod 777 /work_dir/.local && \
+    mkdir -p /work_dir/.keras && chmod 777 /work_dir/.keras && \
+    mkdir -p /work_dir/.jupyter && chmod 777 /work_dir/.jupyter
+
+
 
 RUN mkdir /app
 COPY startup.sh /app/startup.sh
