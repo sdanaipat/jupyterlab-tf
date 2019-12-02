@@ -15,8 +15,10 @@ docker run --runtime $runtime \
            -v ${HOME}/.keras:/work_dir/.keras \
            -v ${HOME}/.jupyter:/work_dir/.jupyter \
            -v ${HOME}/notebooks:/work_dir/notebooks \
+           -v ${HOME}/tensorboard:/work_dir/tensorboard \
            -v /mnt/data:/work_dir/data \
            -v /mnt/work_ssd:/work_dir/ssd \
+           -v /mnt/work_hdd/datasets:/work_dir/datasets \
            -p 8888:8888 \
            -p 6006:6006 \
            sdanaipat/jupyterlab-tf:$tag
